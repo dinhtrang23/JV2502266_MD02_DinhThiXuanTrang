@@ -120,6 +120,6 @@ public class PlayerService {
     public static void sortPlayerByRegister(Scanner scanner){
         List<Player> listPlayers = PlayerDAO.findAll();
         System.out.println("Danh sách ngày tạo sau khi sắp xếp");
-        listPlayers.stream().sorted(Comparator.comparing(Player::getRegisterDate)).forEach(System.out::println);
+        listPlayers.stream().sorted(Comparator.comparing(Player::getRegisterDate).reversed()).forEach(System.out::println);
     }
 }
