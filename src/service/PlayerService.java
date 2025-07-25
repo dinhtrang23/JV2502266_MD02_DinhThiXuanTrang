@@ -46,7 +46,7 @@ public class PlayerService {
                 System.out.println("5. Cập nhật trạng thái");
                 System.out.println("6. Thoát");
                 System.out.print("Lựa chọn của bạn:");
-                int choice = scanner.nextInt();
+                int choice = Integer.parseInt(scanner.nextLine());
                 switch (choice){
                     case 1:
                         System.out.println("Nhập tên player");
