@@ -119,6 +119,8 @@ public class PlayerDAO {
             conn = ConnectionDB.openConnection();
             callSt = conn.prepareCall("{call delete_player(?)}");
             callSt.setInt(1, playerId);
+            callSt.executeUpdate();
+            result = true;
         }catch (Exception e) {
             e.printStackTrace();
 
