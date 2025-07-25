@@ -74,7 +74,7 @@ public class PlayerDAO {
             callSt.setString(3, player.getEmail());
             callSt.setString(4, player.getPhoneNumber());
             callSt.setDate(5, Date.valueOf(player.getRegisterDate()));
-            callSt.setDate(4, Date.valueOf(player.getRegisterDate()));
+            callSt.setBoolean(6, player.isStatus());
             callSt.executeUpdate();
             result = true;
         }catch (Exception e) {
